@@ -17,4 +17,4 @@ Server is running by default on port 8000
 localhost:8000
 ```
 
-Site was built using [PHP](https://www.php.net/), HTML, CSS and [Docker](https://www.docker.com/)🐋
+Site was built using [PHP](https://www.php.net/), CSS and [Docker](https://www.docker.com/)🐋
