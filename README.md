@@ -8,7 +8,7 @@ Simple website that allows logged in users to review the games.
 ***Docker-compose*** and ***dockerfile*** have been added to the project, thanks to which the project can be run through the Docker container using following command:
 
 ```
-docker-compose -f "docker-compose.yml" -p projektDocker up -d
+docker-compose -f "docker-compose.yml" -p projectDocker up -d
 ```
 
 Server is running by default on port 8000
