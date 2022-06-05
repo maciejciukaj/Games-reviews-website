@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: docker_project
+    ports:
+      - "8000:80"
+    depends_on:
+      - "db"
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - ./rest_api:/var/www/html
+  db:
+    image: mysql
+    container_name: docker_project_server
+    ports:
+      - "3306:3306"
+    command: mysqld --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: recenzje
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+
+    volumes:
+      - ./recenzje.sql:/docker-entrypoint-initdb.d/recenzje.sql

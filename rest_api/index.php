@@ -1,0 +1,56 @@
+<?php
+session_start();
+if ((isset($_SESSION['loged'])) && ($_SESSION['loged'] == true)) {
+	header('Location: glowna.php');
+	exit();
+}
+
+?>
+<!DOCTYPE html>
+<html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Logowanie</title>
+	<link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+	<header class="p-3 bg-dark text-white">
+		<div class="container">
+			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+				<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+					<svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+						<use xlink:href="#bootstrap"></use>
+					</svg>
+				</a>
+
+				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+					<li><img class="docker" src="docker_logo.webp" /></li>
+
+				</ul>
+				<!-- 
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Search..." aria-label="Search">
+                </form> -->
+
+
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="display-4 d-flex justify-content-center mt-4 mb-4">Logowanie</div>
+		<?php
+		require_once("funkcje.php");
+		login();
+		if (isset($_SESSION['blad'])) {
+			echo $_SESSION['blad'];
+			unset($_SESSION['blad']);
+		}
+		?>
+	</div>
+</body>
+
+
+</html>

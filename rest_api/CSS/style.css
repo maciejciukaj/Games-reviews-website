@@ -1,0 +1,53 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+/*Ogólny wygląd paska menu*/
+
+/* Main content */
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
+.docker {
+  width: 140px;
+  margin-right: 100px;
+}
+
+.nav-text {
+  color: rgb(206, 212, 212);
+}
+.gry {
+  margin-bottom: 1%;
+}
+.gra-tytul {
+  color: #333;
+}
+.gra-tytul:hover {
+  color: rgb(161, 154, 154);
+}
+.rating {
+  font-size: 180%;
+}
+.list-group-item {
+  border-color: #048ba8;
+  border-width: 2px;
+}
+.opinieText {
+  background-color: #1a659e;
+  color: rgb(233, 222, 222);
+  font-size: 17px;
+  margin-right: 30px;
+  float: right;
+}
+.opis {
+  font-size: 19px;
+}
+.dropdown-toggle,
+.dropdown-item {
+  cursor: pointer;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 2em;
+}
